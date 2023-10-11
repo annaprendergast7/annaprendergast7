@@ -1,0 +1,28 @@
+.img { 
+    background-image: url(../img/bengals.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    width:1500px;
+    height: 1000px;
+}
+
+.box1 {
+    width: 100%;
+    height:100%;
+    background-image: url(../img/FOX_Sports_2022.svg.png);
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    filter: drop-shadow(2px 2px 2px white);
+}
+
+.box2 {
+    width: 100%;
+    height:100%;
+    background-image: url(../img/helmet.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    filter: drop-shadow(2px 2px 2px orange);
+}

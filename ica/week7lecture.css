@@ -1,0 +1,31 @@
+body {
+    background-color: green;
+}
+
+div {
+    background-color: blue;
+    color: white;
+    font-size: 5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5vw;
+    margin: 2.5vw;
+    border: yellow 5px solid;
+}
+
+.div-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* fr= fraction, three equal colums*/
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color: red;
+    }
+    .div-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*when the width is between 600px and 900 px or above 1100 px -change the appearance of <div>*/
