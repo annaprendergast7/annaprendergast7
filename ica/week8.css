@@ -1,0 +1,41 @@
+p {
+    font-size: 5vw;
+}
+
+#delay{
+    animation-duration: 4s;
+    animation-name: slidein; /*just a variable*/
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    /*duration, name, iteration count aka how many times does it run, direction is the way it goes, this is us saying whoever has this id this is what we want it to do*/
+}
+
+@keyframes slidein {
+    from{
+        margin-left: 100%;
+        width:300%
+    }
+    50%{
+        color:greenyellow;
+        font-size:50vw;
+    }
+    to{
+        margin-left:0%;
+    }
+}
+
+.getbig{
+    animation: 3s infinite alternate getbig;
+
+}
+
+@keyframes getbig{
+    from {
+        font-size:1vw;
+        color:red;
+    }
+    to{
+        font-size:100vw;
+        color:blue
+    }
+}

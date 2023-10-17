@@ -33,6 +33,7 @@ body {
     background-color: #000;
     padding: .5em;
     position: sticky;
+    /*sticky in nav so nav bar moves with page*/
     top:0%;
     
 
@@ -45,6 +46,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    /*couldn't figure out how to have the bar looked space right, so looked up different ways with flex*/
 
   }
   
@@ -102,12 +104,14 @@ body {
     max-width: 980px;
     display:flex;
     flex-direction: row;
+    /*flex just makes so much more sense, grid so complicated*/
   }
   
   nav {
     background-color: #000;
     padding: .5em;
     position: sticky;
+    /*add stickey under nav not grid */
     top:0%;
     
 
@@ -145,7 +149,8 @@ body {
 
   .feature {
       width: 200px;
-      padding: 0.5em 0.5em;
+      padding: 0.5em 0.5em; 
+      /*padding shifting to make the photos align */
   }
 
   @media only screen and (min-width:500px) {
@@ -153,11 +158,13 @@ body {
       width:30%;
     }
   }
-  
+
   @media only screen and (max-width: 500px) {
     .container{
       flex-direction: column;
+      /*using media query format from ICA, changing it around, have min first */
     }
     .element{
       width: 100%;
     }
+  }
