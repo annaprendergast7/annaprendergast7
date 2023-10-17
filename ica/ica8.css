@@ -5,6 +5,10 @@ body{
     width: 25vw;
     height: 20vh;
     background-color: indianred;
+
+}
+#box1:hover{
+    background-color: purple;
 }
 
 
@@ -13,8 +17,21 @@ body{
     height:20vh;
     position: relative;
     background-color: orangered;
+    animation-duration: 3s ;
+    animation-name: box2move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(0.075,0.082,0.165,1)
+
 }
 
 @keyframes box2move{
+    from {
+        top: 15px;
+        left:0vw;
+    }
+    to{top:0vw;
+        left:15vw;
+    }
 
 }
