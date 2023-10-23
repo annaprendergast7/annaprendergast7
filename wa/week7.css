@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: brown;
+}
+h1{
+    color: darkolivegreen;
+    
+}
+#h1:hover{
+    background-color: blue;
+}
+div{
+    color:pink;
+
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: burlywood;
+
+}
+
+
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+    color:darkolivegreen;
+    
+}
+
+img{
+    width:30vw;
+    height: 30vh;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property:initial;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+    
+}
+
+#red-ball{
+    background-color:pink;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+}
+/*
+Please animate something using the :hover pseudo-class.
+Please animate something using a transition.*/
