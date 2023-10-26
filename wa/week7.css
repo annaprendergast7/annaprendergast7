@@ -8,9 +8,7 @@ h1{
     color: darkolivegreen;
     
 }
-#h1:hover{
-    background-color: blue;
-}
+
 div{
     color:pink;
 
@@ -45,6 +43,9 @@ img{
     transition-delay: 2s;
     
 }
+#red-ball:hover{
+    background-color: black;
+}
 
 #red-ball{
     background-color:pink;
@@ -55,6 +56,7 @@ img{
     left:5vw;
     top:0;
 }
+
 /*
 Please animate something using the :hover pseudo-class.
 Please animate something using a transition.*/

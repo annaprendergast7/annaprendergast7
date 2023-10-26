@@ -1,0 +1,45 @@
+/*inspired by Lumineers/Shakey Graves tour sites
+Sticky top of
+The webpage you create must be responsive to two screen sizes -- a mobile screen of around 400px width, and a laptop screen of around 1500px width.
+You are allowed to use up to 3 colors, along with black and white.
+You may use whatever fonts you prefer.
+The webpage may use pictures, but careful consideration of how to use pictures should be given.
+The webpage may use geometric shapes.*/
+
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightpink;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div {
+    display:flex;
+    flex-direction: column;
+}
+
+.Concert{
+    background-color: blanchedalmond; 
+    display:flex;
+    width:90%;
+    margin-bottom: 2cm;
+    padding: 1em;
+}
+.column1{
+    width:40%;
+    float:left;
+}
+.about{
+    width:60%;
+    float:right;
+}
+
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
