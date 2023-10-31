@@ -8,38 +8,78 @@ The webpage may use geometric shapes.*/
 
 
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: lightpink;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color:black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(73, 157, 98);
 }
 
+h1 {
+    font-weight: 1000;
+    padding:2em 2em 2em;
+    background-color: blanchedalmond; 
+    border: rgb(143, 211, 143); 
+    border-radius: 4em; 
+    font-style: oblique;
+}
+
+/** 
 div {
     display:flex;
     flex-direction: column;
 }
+**/
 
-.Concert{
+.opening {
+    font-size: larger;
+    text-align: center;
+    margin-left:6cm;
+    margin-right:5cm;
+    margin-bottom:3cm;
+    font-style: oblique;
+}
+
+
+.Concert {
     background-color: blanchedalmond; 
     display:flex;
     width:90%;
     margin-bottom: 2cm;
-    padding: 1em;
+    padding: 2em 2em 1em 1em;
 }
-.column1{
+.Concert:hover {
+    background-color:rgb(143, 211, 143);
+}
+h2{
+    font-weight: 1000em;
+    filter: drop-shadow(2px 2px 2px blanchedalmond);
+}
+.column1 {
     width:40%;
     float:left;
+    padding: 3px 3px 3px 3px;
 }
-.about{
+.date{
+    font-style: italic;
+}
+
+.about {
     width:60%;
     float:right;
+    padding: 3px 5px;
+    text-align: left;
 }
 
 
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
+@media screen and (max-width: 400px) {
+    .Concert {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:1500px) {
+    .Concert{
+        flex-direction: column;
     }
 }
