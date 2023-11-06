@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Silly story generator</title>
+
+    <style>
+      body {
+        font-family: helvetica, sans-serif;
+        width: 350px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      div {
+        padding-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 150px;
+      }
+
+      p {
+        background:lightgreen;
+        color: black;
+        padding: 10px;
+        visibility: hidden;
+        box-shadow:10px 5px green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="">
+    </div>
+    <div>
+      <label for="us">US</label>
+      <input id="us" type="radio" name="ukus" value="us" checked>
+      <label for="uk">UK</label>
+      <input id="uk" type="radio" name="ukus" value="uk">
+    </div>
+    <div>
+      <button class="randomize"> Generate random story</button>
+    </div>
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
+    <script>
+
+const customName = document.getElementById('customname');
+const randomize = document.querySelector('.randomize');
+const story = document.querySelector('.story');
+  //radnomValue
+  function randomValueFromArray(array){
+  const random = Math.floor(Math.random()*array.length);
+  return array[random];
+    }
+  //variables to declare
+  let storyText = "It was snowing outside, so :insertx: went for a walk. When they got to :inserty:, they were confused on why there were so many penguins dancing. Then :insertz: started coming from the sky with the snow. It was strange, but — :insertx: weighs 300 pounds, and it was a hot day.";
+  const insertX = ["Big Z","Fred Again", "Sid the sloth"];
+  const insertY = ["Mars","Bermuda", "the grocery store"];
+  const insertZ = ["cats","apple", "forks"];
+
+  //event listener
+  randomize.addEventListener('click',result);
+
+//method or function
+function result() {
+  let newStory = storyText;
+  const xItem = randomValueFromArray(insertX);
+  const yItem = randomValueFromArray(insertY);
+  const zItem = randomValueFromArray(insertZ);
+
+newStory = newStory.replaceAll(':insertx:',xItem);
+newStory = newStory.replaceAll(':inserty:',yItem);
+newStory = newStory.replaceAll(':insertz:',zItem);
+
+if(customName.value !== '') {
+    const name = customName.value;
+    newStory = newStory.replaceAll('Bob',name);
+  }
+
+  if(document.getElementById("uk").checked) {
+    const weight = Math.round(300);
+    const temperature =  Math.round(94);
+    newStory = newStory.replaceAll('200 pounds',weight);
+    newStory = newStory.replaceAll('90 Farenheight', temperature);
+
+  }
+  story.textContent = newStory;
+  story.style.visibility = 'visible';
+}
+
+    </script>
+
+  </body>
+</html>
+
+
