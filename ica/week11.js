@@ -1,13 +1,14 @@
+
 console.log("test");
 
-const x =2;
-const y =2;
+const x = 2;
+const y = 2;
 
 
-if (x===y){
+if (x === y){
     console.log("SUCCESS");
 }
-else{
+else {
     console.log("FAIL");
 }
 
@@ -39,7 +40,7 @@ function draw(){
         let red = random(255);
         let green = random(255);
         let blue = random (255);
-        let color = "rgba("+red+","+green+","+blue",0.5)"
+        let color = "rgba ("+red+","+green+","+blue", 1)"
         console.log(color);
         ctx.fillStyle = "rgba(255,0,0,0.5)"
         ctx.arc(
@@ -50,8 +51,9 @@ function draw(){
             2 * Math.PI,
         );
         ctx.fill();
-        )
+        
     }
 }
+//could not figure out what was wrong with my code
 
 btn.addEventListener("click",draw);
