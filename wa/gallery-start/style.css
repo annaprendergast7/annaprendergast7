@@ -2,7 +2,7 @@ h1 {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
   background-color: blanchedalmond;
-  border-color: brown;
+
 }
 
 body {
@@ -13,12 +13,12 @@ body {
 .full-img {
   position: relative;
   display: block;
-  width: 1%;
-  height: 1%;
+  width: 100px;
+  height: 200px;
 }
-.images{
-  width: 1px;
-  height: 1px;
+.displayed-img{
+  width: 50px;
+  height: 40px;
 }
 .overlay {
   position: absolute;
