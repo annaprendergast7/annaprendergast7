@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #33aa53;
+    color: #333;
+}
+
+
+.image{
+    width: 400px;
+    height: 400px;
+    position: center;
+}
+button {
+    background-color: #760de6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.breedInput{
+    background-color: beige;
+    width: max-content;
+}
