@@ -50,3 +50,4 @@ async function getBreed(){
 //Because when you search a breed, around 100 images show up, I decided to use the first that shows up for each breed. So I showed the first image that comes up in an array
 //this way, you can generate a random dog, or one that you search
 //the biggest issue with this is you have to specifically type in the breed by the way the website
+//also had some issues with some of the API pictures not loading, couldn't figure out how to fix it on my end
