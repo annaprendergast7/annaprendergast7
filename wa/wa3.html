@@ -100,3 +100,53 @@
 
 </body>
 </html>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const spinButton = document.querySelector('.spinBtn');
+    const clearButton = document.querySelector('#clear');
+    const wheel = document.querySelector('.wheel');
+    const box = document.querySelector('.box');
+    let spinning = false;
+    let spinCount = 0;
+    let lastDegree = 0;
+  
+    const resetWheel = () => {
+        wheel.style.transition = 'none';
+        wheel.style.transform = `rotate(0deg)`;
+        lastDegree = 0;
+        spinCount = 0;
+        box.innerText = '';
+        spinButton.disabled = false;
+        spinning = false;
+    };
+  
+    spinButton.addEventListener('click', function() {
+        if (!spinning && spinCount < 10) {
+            let deg = lastDegree + Math.floor(5000 + Math.random() * 5000); // Random spin
+            wheel.style.transition = 'transform 5s ease-in-out';
+            wheel.style.transform = `rotate(${deg}deg)`;
+            lastDegree = deg; // Update the last degree for the next spin
+            spinning = true;
+        }
+    });
+  
+    wheel.addEventListener('transitionend', function() {
+        if (spinCount < 10) {
+            const actualDeg = Math.floor((lastDegree % 360) / 40);
+            let selectedNumber = (10 - actualDeg) % 10;
+            selectedNumber = selectedNumber === 0 ? 1 : selectedNumber; // Adjust for 0 index
+            box.innerText += selectedNumber + ' '; // Append the number
+            spinning = false;
+            spinCount++;
+  
+            if (spinCount >= 10) {
+                spinButton.disabled = true; // Disable the button after 10 spins
+            }
+        }
+    });
+  
+    clearButton.addEventListener('click', function() {
+        resetWheel();
+    });
+  });
+  

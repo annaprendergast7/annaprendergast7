@@ -10,7 +10,7 @@ let answer = '';
 const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
 
 async function getQuote() {
-   // try -> tries something; if it returns an error, it puts us into the catch block
+
     try {
         const response = await fetch(endpoint);
         // if !response.ok is "if the response ISN'T okay (status code 200)"
